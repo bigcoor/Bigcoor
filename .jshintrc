@@ -1,7 +1,7 @@
 {
     "bitwise"   :  true
   , "camelcase" :  true
-  , "eqeqeq"    :  false
+  , "eqeqeq"    :  true
   , "indent"    :  2
   , "latedef"   :  true
   , "quotmark"  :  "single"

@@ -1,11 +1,11 @@
 // Generated on 2014-09-03 using generator-angular-fullstack 2.0.13
 'use strict';
 
-module.exports = function (grunt) {
+module.exports = function(grunt) {
   var localConfig;
   try {
     localConfig = require('./server/config/local.env');
-  } catch(e) {
+  } catch (e) {
     localConfig = {};
   }
 
@@ -27,13 +27,13 @@ module.exports = function (grunt) {
   grunt.initConfig({
 
     // Project settings
-    pkg: grunt.file.readJSON('package.json'),
-    yeoman: {
+    pkg    : grunt.file.readJSON('package.json'),
+    yeoman : {
       // configurable paths
       client: require('./bower.json').appPath || 'client',
       dist: 'dist'
     },
-    express: {
+    express : {
       options: {
         port: process.env.PORT || 9000
       },
