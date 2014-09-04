@@ -1,0 +1,36 @@
+{
+  "name": "bigcoor",
+  "version": "0.1.0",
+  "description": "A crowdfunding platform for creative open source projects in the world.",
+  "author": "meepo Xu",
+  "main": "index.js",
+  "scripts": {
+    "test": "grunt test",
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "kraken-js": "^1.0.1",
+    "kraken-devtools": "^1.0.0",
+    "engine-munger": "^0.2.0",
+    "express": "^4.3.0",
+    "localizr": "^0.1.0"
+  },
+  "devDependencies": {
+    "mocha": "^1.18.0",
+    "supertest": "^0.9.0",
+    "grunt-contrib-clean": "^0.5.0",
+    "grunt-config-dir": "^0.3.2",
+    "grunt-copy-to": "0.0.10",
+    "grunt": "^0.4.5",
+    "grunt-mocha-cli": "^1.10.0",
+    "grunt-localizr": "^0.1.0",
+    "grunt-contrib-jshint": "^0.10.0"
+  },
+  "generator-kraken": {
+    "version": "1.1.0",
+    "template": false,
+    "css": false,
+    "js": false,
+    "task": "grunt"
+  }
+}
