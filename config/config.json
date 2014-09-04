@@ -8,7 +8,7 @@
 
     "router": {
       "module": {
-        "arguments": [{ "directory": "path:./controllers" }]
+        "arguments": [{ "path": "path:./app/routes.js" }]
       }
     },
 
@@ -37,5 +37,14 @@
         "arguments": [ "errors/500" ]
       }
     }
-  }
+  },
+  "view engines": {
+    "jade": {
+      "module": "consolidate"
+    }
+  },
+  "express": {
+    "view engine": "jade",
+    "views": "path:./app/views"
+}
 }
