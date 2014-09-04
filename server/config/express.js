@@ -1,19 +1,15 @@
-/**
- * Express configuration
- */
-
 'use strict';
 
-var express = require('express');
-var favicon = require('serve-favicon');
-var morgan = require('morgan');
-var compression = require('compression');
-var bodyParser = require('body-parser');
-var methodOverride = require('method-override');
-var cookieParser = require('cookie-parser');
-var errorHandler = require('errorhandler');
-var path = require('path');
-var config = require('./environment');
+var express = require('express')
+  , favicon = require('serve-favicon')
+  , morgan = require('morgan')
+  , compression = require('compression')
+  , bodyParser = require('body-parser')
+  , methodOverride = require('method-override')
+  , cookieParser = require('cookie-parser')
+  , errorHandler = require('errorhandler')
+  , path = require('path')
+  , config = require('./environment');
 
 module.exports = function(app) {
   var env = app.get('env');
@@ -25,15 +21,15 @@ module.exports = function(app) {
   app.use(bodyParser.json());
   app.use(methodOverride());
   app.use(cookieParser());
-  
-  if ('production' === env) {
+
+  if (env === 'prod') {
     app.use(favicon(path.join(config.root, 'public', 'favicon.ico')));
     app.use(express.static(path.join(config.root, 'public')));
     app.set('appPath', config.root + '/public');
     app.use(morgan('dev'));
   }
 
-  if ('development' === env || 'test' === env) {
+  if (env === 'dev' || env === 'test') {
     app.use(require('connect-livereload')());
     app.use(express.static(path.join(config.root, '.tmp')));
     app.use(express.static(path.join(config.root, 'client')));
