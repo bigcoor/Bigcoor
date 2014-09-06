@@ -46,5 +46,6 @@
   "express": {
     "view engine": "jade",
     "views": "path:./app/views"
-}
+  },
+  "VERBOSE": true
 }

@@ -26,7 +26,8 @@
     "grunt-localizr": "^0.1.0",
     "grunt-contrib-jshint": "^0.10.0",
     "consolidate": "^0.10.0",
-    "then-jade": "^2.0.0"
+    "then-jade": "^2.0.0",
+    "apibee": "0.0.1"
   },
   "generator-kraken": {
     "version": "1.1.0",

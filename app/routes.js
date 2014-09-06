@@ -1,11 +1,15 @@
 'use strict';
 
-var IndexModel = require('../models/index');
+var IndexModel = require('../models/index')
+  , bee        = require('apibee')
+  , configPath = __dirname + '../config/config.json';
 
 module.exports = function(router) {
-  var model = new IndexModel();
-
-  router.get('/', function(req, res) {
-    res.render('index', model);
-  });
+  var api = new bee(router, 'v1', configPath)
+    , model = new IndexModel();
+  api.group('Index', function(api) {
+    api.get('/', function(req, res) {
+      res.render('index', model);
+    });
+  })
 };
