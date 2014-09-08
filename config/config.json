@@ -2,7 +2,7 @@
   "middleware": {
     "static": {
       "module": {
-        "arguments": [ "path:./.build" ]
+        "arguments": [ "path:../app/public" ]
       }
     },
 
@@ -21,7 +21,7 @@
     },
     
     "fileNotFound": {
-      "enabled": true,
+      "enabled": false,
       "priority": 130,
       "module": {
         "name": "kraken-js/middleware/404",
@@ -30,7 +30,7 @@
     },
 
     "serverError": {
-      "enabled": true,
+      "enabled": false,
       "priority": 140,
       "module": {
         "name": "kraken-js/middleware/500",
